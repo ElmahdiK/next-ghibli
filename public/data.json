@@ -1,0 +1,57 @@
+[
+    {
+        "id": 0,
+        "name": "bleach",
+        "quantity": 20
+    },
+    {
+        "id": 1,
+        "name": "dragonball",
+        "quantity": 19
+    },
+    {
+        "id": 2,
+        "name": "naruto",
+        "quantity": 21
+    },
+    {
+        "id": 3,
+        "name": "onepiece",
+        "quantity": 16
+    },
+    {
+        "id": 4,
+        "name": "fma",
+        "quantity": 7
+    },
+    {
+        "id": 5,
+        "name": "snk",
+        "quantity": 10
+    },
+    {
+        "id": 6,
+        "name": "johnwick",
+        "quantity": 8
+    },
+    {
+        "id": 7,
+        "name": "lotr",
+        "quantity": 10
+    },
+    {
+        "id": 8,
+        "name": "pokemon",
+        "quantity": 28
+    },
+    {
+        "id": 9,
+        "name": "spiderman",
+        "quantity": 18
+    },
+    {
+        "id": 10,
+        "name": "sw",
+        "quantity": 10
+    }
+]
