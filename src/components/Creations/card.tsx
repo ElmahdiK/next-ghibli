@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CardProps {
   name: string;
   index: number;
@@ -12,7 +14,14 @@ export default function card(props: CardProps) {
       key={`div-${index}`}
       className={`m-auto w-full bg-white p-4 shadow-md`}
     >
-      <img
+      <Image
+        src={`./${name}/${index}.webp`}
+        alt={`${name}_${index}`}
+        width={300}
+        height={300}
+      />
+
+      {/* <img
         src={`./${name}/${index}.webp`}
         alt={`${name}_${index}`}
         className="h-300 w-full object-cover"
@@ -20,7 +29,7 @@ export default function card(props: CardProps) {
           currentTarget.onerror = null; // prevents looping
           currentTarget.src = "./not-found.jpeg";
         }}
-      />
+      /> */}
     </div>
   );
 }

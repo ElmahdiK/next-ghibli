@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import Creations from "@/components/Creations";
 // import Header from '@/components/Header';
