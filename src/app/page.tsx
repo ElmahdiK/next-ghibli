@@ -13,7 +13,7 @@ export default function Page() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("./data.json")
       .then((res) => res.json())
       .then((mangas) => {
         console.log(mangas);
