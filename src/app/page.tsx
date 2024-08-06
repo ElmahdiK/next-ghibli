@@ -6,7 +6,7 @@ import Creations from "@/components/Creations";
 
 export default function Page() {
   const [isLoading, setLoading] = useState(true);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any[]>([]);
   const [mangaIndex, setMangaIndex] = useState(0);
 
   const fetchData = async () => {
@@ -50,7 +50,7 @@ export default function Page() {
               data.length > 0 &&
               data.map((item) => (
                 <option key={item.id} value={item.id}>
-                  {item.name} x{item.quantity}
+                  {item.name}
                 </option>
               ))}
           </select>
