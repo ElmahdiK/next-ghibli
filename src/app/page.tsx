@@ -5,20 +5,26 @@ import Creations from "@/components/Creations";
 // import Header from '@/components/Header';
 
 export default function Page() {
-  // const [mangaIndex, setMangaIndex] = useState<any | null>(null);
-  const mangaIndex = 0;
-
-  const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
+  const [mangaIndex, setMangaIndex] = useState(0);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("./data.json");
+      const jsonData = await response.json();
+      console.log("jsonData", jsonData);
+      setData(jsonData);
+      setLoading(false);
+      return jsonData;
+    } catch (error) {
+      console.log("error", error);
+      return error;
+    }
+  };
 
   useEffect(() => {
-    fetch("./data.json")
-      .then((res) => res.json())
-      .then((mangas) => {
-        console.log(mangas);
-        setData(mangas);
-        setLoading(false);
-      });
+    fetchData();
   }, []);
 
   if (isLoading) return <p>Loading...</p>;
@@ -30,13 +36,23 @@ export default function Page() {
         <p className="text-center">
           <select
             className="text-center text-2xl font-semibold outline-0"
-            // onChange={(e) => setMangaIndex(e.target.value)}
+            onChange={(e) => setMangaIndex(e.target.value)}
           >
+            {/* {data.map((manga) => {
+              <option value={manga.name}>{manga.name}</option>;
+            })} */}
             {/* {data[mangaIndex].map((e, index) => (
               <option key={e.id} value={index}>
                 {e.name}
               </option>
             ))} */}
+            {data &&
+              data.length > 0 &&
+              data.map((item) => (
+                <option key={item.id} value={item.id}>
+                  {item.name} x{item.quantity}
+                </option>
+              ))}
           </select>
           <br />
           <span className="text-sm">
@@ -44,7 +60,12 @@ export default function Page() {
           </span>
         </p>
       </header>
-      <Creations manga={data[mangaIndex || 0]} />
+      {data && data.length > 0 && (
+        <Creations
+          name={data[mangaIndex].name}
+          quantity={data[mangaIndex].quantity}
+        />
+      )}
     </>
   );
 }
