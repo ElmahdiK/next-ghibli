@@ -12,24 +12,15 @@ export default function card(props: CardProps) {
     <div
       id={`div-${index}`}
       key={`div-${index}`}
-      className={`m-auto w-full bg-white p-4 shadow-md`}
+      className={`m-auto w-full bg-white p-4 shadow-md flex justify-center items-center`}
     >
       <Image
         src={`./${name}/${index}.webp`}
-        alt={`${name}_${index}`}
-        width={300}
-        height={300}
+        alt={`${index}_${name}`}
+        width={0}
+        height={0}
+        style={{ width: "100%", height: "auto" }}
       />
-
-      {/* <img
-        src={`./${name}/${index}.webp`}
-        alt={`${name}_${index}`}
-        className="h-300 w-full object-cover"
-        onError={({ currentTarget }) => {
-          currentTarget.onerror = null; // prevents looping
-          currentTarget.src = "./not-found.jpeg";
-        }}
-      /> */}
     </div>
   );
 }

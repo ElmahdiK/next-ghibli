@@ -32,20 +32,12 @@ export default function Page() {
 
   return (
     <>
-      <header className="flex flex-col items-center justify-center bg-white p-4 sm:flex-row md:flex-row ">
+      <header className="flex flex-col items-center justify-center bg-white shadow-md  p-4 sm:flex-row md:flex-row ">
         <p className="text-center">
           <select
-            className="text-center text-2xl font-semibold outline-0"
+            className="text-center text-2xl font-semibold outline-0 bg-transparent"
             onChange={(e) => setMangaIndex(parseInt(e.target.value))}
           >
-            {/* {data.map((manga) => {
-              <option value={manga.name}>{manga.name}</option>;
-            })} */}
-            {/* {data[mangaIndex].map((e, index) => (
-              <option key={e.id} value={index}>
-                {e.name}
-              </option>
-            ))} */}
             {data &&
               data.length > 0 &&
               data.map((item) => (
@@ -55,9 +47,9 @@ export default function Page() {
               ))}
           </select>
           <br />
-          <span className="text-sm">
+          <h1 className="text-sm">
             {"{ "} imagined by the Ghibli studio {" }"}{" "}
-          </span>
+          </h1>
         </p>
       </header>
       {data && data.length > 0 && (
