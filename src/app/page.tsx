@@ -36,7 +36,7 @@ export default function Page() {
         <p className="text-center">
           <select
             className="text-center text-2xl font-semibold outline-0"
-            onChange={(e) => setMangaIndex(e.target.value)}
+            onChange={(e) => setMangaIndex(parseInt(e.target.value))}
           >
             {/* {data.map((manga) => {
               <option value={manga.name}>{manga.name}</option>;
