@@ -55,6 +55,7 @@ export default function Page() {
       {data && data.length > 0 && (
         <Creations
           name={data[mangaIndex].name}
+          path={data[mangaIndex].path}
           quantity={data[mangaIndex].quantity}
         />
       )}

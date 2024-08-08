@@ -2,11 +2,12 @@ import Image from "next/image";
 
 interface CardProps {
   name: string;
+  path: string;
   index: number;
 }
 
 export default function card(props: CardProps) {
-  const { name, index } = props;
+  const { name, path, index } = props;
 
   return (
     <div
@@ -15,7 +16,7 @@ export default function card(props: CardProps) {
       className={`m-auto w-full bg-white p-4 shadow-md flex justify-center items-center`}
     >
       <Image
-        src={`./${name}/${index}.webp`}
+        src={`./${path}/${index}.webp`}
         alt={`${index}_${name}`}
         width={0}
         height={0}

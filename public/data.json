@@ -1,57 +1,68 @@
 [
     {
         "id": 0,
-        "name": "dragonball",
+        "name": "Dragon Ball",
+        "path": "dragonball",
         "quantity": 19
     },
     {
         "id": 1,
-        "name": "naruto",
+        "name": "Naruto",
+        "path": "naruto",
         "quantity": 21
     },
     {
         "id": 2,
-        "name": "onepiece",
+        "name": "One Piece",
+        "path": "onepiece",
         "quantity": 16
     },
     {
         "id": 3,
-        "name": "bleach",
+        "name": "Bleach",
+        "path": "bleach",
         "quantity": 20
     },
     {
         "id": 4,
-        "name": "fma",
+        "name": "Fullmetal Alchemist",
+        "path": "fma",
         "quantity": 7
     },
     {
         "id": 5,
-        "name": "snk",
+        "name": "Attack on Titan",
+        "path": "snk",
         "quantity": 10
     },
     {
         "id": 6,
-        "name": "johnwick",
+        "name": "John Wick",
+        "path": "johnwick",
         "quantity": 8
     },
     {
         "id": 7,
-        "name": "lotr",
+        "name": "The Lord of the Rings",
+        "path": "lotr",
         "quantity": 10
     },
     {
         "id": 8,
-        "name": "pokemon",
+        "name": "Pokémon",
+        "path": "pokemon",
         "quantity": 28
     },
     {
         "id": 9,
-        "name": "spiderman",
+        "name": "Spider-Man",
+        "path": "spiderman",
         "quantity": 18
     },
     {
         "id": 10,
-        "name": "sw",
+        "name": "Star Wars",
+        "path": "sw",
         "quantity": 10
     }
 ]
